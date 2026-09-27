@@ -39,11 +39,26 @@ Each problem gets a `problems/{number}. {Title}` folder with:
 
 | # | Problem | Difficulty | Pattern |
 |---|---|---|---|
+| 1 | [Two Sum](problems/1.%20Two%20Sum/) | Easy | Hash map lookup |
+| 3 | [Longest Substring Without Repeating Characters](problems/3.%20Longest%20Substring%20Without%20Repeating%20Characters/) | Medium | [Sliding Window (variable size)](https://www.hellointerview.com/learn/code/sliding-window/longest-substring-without-repeating-characters) |
 | 11 | [Container With Most Water](problems/11.%20Container%20With%20Most%20Water/) | Medium | [Two Pointers](https://www.hellointerview.com/learn/code/two-pointers/overview) |
+| 13 | [Roman to Integer](problems/13.%20Roman%20to%20Integer/) | Easy | Single pass |
+| 48 | [Rotate Image](problems/48.%20Rotate%20Image/) | Medium | [Matrices](https://www.hellointerview.com/learn/code/matrices/rotate-image) |
+| 49 | [Group Anagrams](problems/49.%20Group%20Anagrams/) | Medium | Hash map grouping |
 | 53 | [Maximum Subarray](problems/53.%20Maximum%20Subarray/) | Medium | [Dynamic Programming](https://www.hellointerview.com/learn/code/dynamic-programming/fundamentals) |
+| 56 | [Merge Intervals](problems/56.%20Merge%20Intervals/) | Medium | [Intervals](https://www.hellointerview.com/learn/code/intervals/merge-intervals) |
+| 58 | [Length of Last Word](problems/58.%20Length%20of%20Last%20Word/) | Easy | Reverse scan |
+| 75 | [Sort Colors](problems/75.%20Sort%20Colors/) | Medium | [Two Pointers](https://www.hellointerview.com/learn/code/two-pointers/sort-colors) |
+| 121 | [Best Time to Buy and Sell Stock](problems/121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock/) | Easy | [Greedy](https://www.hellointerview.com/learn/code/greedy/best-time-to-buy-and-sell-stock) |
+| 151 | [Reverse Words in a String](problems/151.%20Reverse%20Words%20in%20a%20String/) | Medium | [Two Pointers](https://www.hellointerview.com/learn/code/two-pointers/overview) |
 | 167 | [Two Sum II - Input Array Is Sorted](problems/167.%20Two%20Sum%20II%20-%20Input%20Array%20Is%20Sorted/) | Medium | [Two Pointers](https://www.hellointerview.com/learn/code/two-pointers/overview) |
 | 209 | [Minimum Size Subarray Sum](problems/209.%20Minimum%20Size%20Subarray%20Sum/) | Medium | [Sliding Window (variable size)](https://www.hellointerview.com/learn/code/sliding-window/variable-length) |
+| 238 | [Product of Array Except Self](problems/238.%20Product%20of%20Array%20Except%20Self/) | Medium | [Prefix Sum](https://www.hellointerview.com/learn/code/prefix-sum/overview) |
+| 242 | [Valid Anagram](problems/242.%20Valid%20Anagram/) | Easy | Hash map counting |
+| 283 | [Move Zeroes](problems/283.%20Move%20Zeroes/) | Easy | [Two Pointers](https://www.hellointerview.com/learn/code/two-pointers/move-zeroes) |
 | 350 | [Intersection of Two Arrays II](problems/350.%20Intersection%20of%20Two%20Arrays%20II/) | Easy | Hash map counting |
+| 412 | [Fizz Buzz](problems/412.%20Fizz%20Buzz/) | Easy | Simulation |
+| 438 | [Find All Anagrams in a String](problems/438.%20Find%20All%20Anagrams%20in%20a%20String/) | Medium | [Sliding Window (fixed size)](https://www.hellointerview.com/learn/code/sliding-window/fixed-length) |
 | 485 | [Max Consecutive Ones](problems/485.%20Max%20Consecutive%20Ones/) | Easy | Single pass |
 | 560 | [Subarray Sum Equals K](problems/560.%20Subarray%20Sum%20Equals%20K/) | Medium | [Prefix Sum](https://www.hellointerview.com/learn/code/prefix-sum/overview) |
 | 643 | [Maximum Average Subarray I](problems/643.%20Maximum%20Average%20Subarray%20I/) | Easy | [Sliding Window (fixed size)](https://www.hellointerview.com/learn/code/sliding-window/fixed-length) |
