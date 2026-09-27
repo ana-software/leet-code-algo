@@ -6,7 +6,7 @@ Algorithm problems solved in TypeScript, for interview practice. Each problem ha
 
 ```
 problems/
-  README.md            table of every problem, by number
+  README.md            table of every problem, by topic
   167. Two Sum II - Input Array Is Sorted/
     README.md          explanation, walkthrough, complexity, theory link
     solution.ts        the solution
@@ -68,4 +68,4 @@ Each problem gets a `problems/{number}. {Title}` folder with:
 
 ## Problems
 
-The full list of problems, by number, is in [problems/README.md](problems/README.md).
+The full list of problems, by topic, is in [problems/README.md](problems/README.md).

@@ -180,7 +180,7 @@ Run `npx tsx "problems/{folder}/solution.test.ts"` from the repo root. If a case
 
 ## 6b. Update the problems index
 
-Add a row for each new problem to the table in `problems/README.md`, keeping rows sorted by number. The Problem cell links to the folder relative to `problems/`, i.e. `{folder}/` (URL-encode spaces as `%20`). The Pattern cell is the Theory link from the problem's README, or a short plain-text name of the approach when there is no Theory link.
+Add a row for each new problem to the table in `problems/README.md`, keeping rows grouped by topic: in the same topic order as the "Problems by pattern" table in the root README, and by number within a topic (a problem with two patterns goes under whichever comes first in that order; a new topic goes at the end). The Problem cell is `[{number}. {Title}]` (there is no separate number column) and links to the folder relative to `problems/`, i.e. `{folder}/` (URL-encode spaces as `%20`). The Pattern cell is the Theory link from the problem's README, or a short plain-text name of the approach when there is no Theory link.
 
 ## 7. Report
 
