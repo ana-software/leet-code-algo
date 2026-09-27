@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium · **Topics:** Array, Two Pointers, Sorting, Quicksort, Bubble Sort · [LeetCode](https://leetcode.com/problems/sort-colors/)
 
-**Theory:** [Hello Interview — Two Pointers (Sort Colors)](https://www.hellointerview.com/learn/code/two-pointers/sort-colors)
+**Theory:** [Hello Interview — Two Pointers (Sort Colors)](https://www.hellointerview.com/learn/code/two-pointers/sort-colors) · [GeeksforGeeks — Two Pointers](https://www.geeksforgeeks.org/dsa/two-pointers-technique/)
 
 ## Problem
 You are given an array `nums` with `n` objects colored red, white, or blue, sort them **[in-place](https://en.wikipedia.org/wiki/In-place_algorithm)** so that objects of the same color are adjacent, with the colors in the order red, white, and blue.

@@ -2,7 +2,7 @@
 
 # leet-code-algo
 
-Algorithm problems solved in TypeScript, for interview practice. Each problem has an explanation of the approach, a solution you can paste into LeetCode, and tests that run it like LeetCode's "Run" button. Each explanation links to the [Hello Interview](https://www.hellointerview.com/learn/code) lesson on its pattern. New problems, or whole LeetCode problem lists, are added by a Claude Code agent.
+Algorithm problems solved in TypeScript, for interview practice. Each problem has an explanation of the approach, a solution you can paste into LeetCode, and tests that run it like LeetCode's "Run" button. Each explanation links to theory on its pattern from [Hello Interview](https://www.hellointerview.com/learn/code) and [GeeksforGeeks](https://www.geeksforgeeks.org/). New problems, or whole LeetCode problem lists, are added by a Claude Code agent.
 
 ```
 problems/
@@ -35,7 +35,7 @@ Ask Claude Code to use the `add-algo` agent (defined in [.claude/agents/add-algo
 
 Each problem gets a `problems/{number}. {Title}` folder with:
 
-- `README.md` — the statement, approach, a walkthrough of Example 1, complexity, and a link to the matching [Hello Interview](https://www.hellointerview.com/learn/code) lesson
+- `README.md` — the statement, approach, a walkthrough of Example 1, complexity, and links to the matching [Hello Interview](https://www.hellointerview.com/learn/code) lesson and [GeeksforGeeks](https://www.geeksforgeeks.org/) article
 - `solution.ts` — the solution, ready to paste into LeetCode
 - `solution.test.ts` — runs the examples and edge cases like LeetCode's "Run" button
 

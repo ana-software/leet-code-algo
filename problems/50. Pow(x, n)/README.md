@@ -2,6 +2,8 @@
 
 **Difficulty:** Medium · **Topics:** Math, Recursion · [LeetCode](https://leetcode.com/problems/powx-n/)
 
+**Theory:** [GeeksforGeeks — Binary Exponentiation](https://www.geeksforgeeks.org/dsa/binary-exponentiation-for-competitive-programming/)
+
 ## Problem
 Implement [pow(x, n)](http://www.cplusplus.com/reference/valarray/pow/), which calculates `x` raised to the power `n` (i.e., `x^n`).
 

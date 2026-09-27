@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium · **Topics:** Array, Binary Search, Ternary Search · [LeetCode](https://leetcode.com/problems/peak-index-in-a-mountain-array/)
 
-**Theory:** [Hello Interview — Binary Search](https://www.hellointerview.com/learn/code/binary-search/overview)
+**Theory:** [Hello Interview — Binary Search](https://www.hellointerview.com/learn/code/binary-search/overview) · [GeeksforGeeks — Binary Search](https://www.geeksforgeeks.org/dsa/binary-search/)
 
 ## Problem
 You are given an integer **mountain** array `arr` of length `n` where the values increase to a **peak element** and then decrease.

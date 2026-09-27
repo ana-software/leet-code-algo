@@ -2,6 +2,8 @@
 
 **Difficulty:** Easy · **Topics:** Array · [LeetCode](https://leetcode.com/problems/max-consecutive-ones/)
 
+**Theory:** [GeeksforGeeks — Maximum Consecutive Ones](https://www.geeksforgeeks.org/dsa/maximum-consecutive-ones-or-zeros-in-a-binary-array/)
+
 ## Problem
 Given a binary array `nums`, return *the maximum number of consecutive* `1`*'s in the array*.
 

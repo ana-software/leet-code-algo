@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium · **Topics:** Array, Binary Search · [LeetCode](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 
-**Theory:** [Hello Interview — Binary Search](https://www.hellointerview.com/learn/code/binary-search/search-in-rotated-sorted-array)
+**Theory:** [Hello Interview — Binary Search](https://www.hellointerview.com/learn/code/binary-search/search-in-rotated-sorted-array) · [GeeksforGeeks — Binary Search](https://www.geeksforgeeks.org/dsa/binary-search/)
 
 ## Problem
 There is an integer array `nums` sorted in ascending order (with **distinct** values).

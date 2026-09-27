@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium · **Topics:** Array, Hash Table, Prefix Sum · [LeetCode](https://leetcode.com/problems/subarray-sum-equals-k/)
 
-**Theory:** [Hello Interview — Prefix Sum](https://www.hellointerview.com/learn/code/prefix-sum/overview)
+**Theory:** [Hello Interview — Prefix Sum](https://www.hellointerview.com/learn/code/prefix-sum/overview) · [GeeksforGeeks — Prefix Sum](https://www.geeksforgeeks.org/dsa/prefix-sum-array-implementation-applications-competitive-programming/)
 
 ## Problem
 Given an array of integers `nums` and an integer `k`, return *the total number of subarrays whose sum equals to* `k`.

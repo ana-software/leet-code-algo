@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy · **Topics:** Array, Two Pointers · [LeetCode](https://leetcode.com/problems/move-zeroes/)
 
-**Theory:** [Hello Interview — Two Pointers (Move Zeroes)](https://www.hellointerview.com/learn/code/two-pointers/move-zeroes)
+**Theory:** [Hello Interview — Two Pointers (Move Zeroes)](https://www.hellointerview.com/learn/code/two-pointers/move-zeroes) · [GeeksforGeeks — Two Pointers](https://www.geeksforgeeks.org/dsa/two-pointers-technique/)
 
 ## Problem
 Given an integer array `nums`, move all `0`'s to the end of it while maintaining the relative order of the non-zero elements.

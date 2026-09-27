@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium · **Topics:** Array, Binary Search · [LeetCode](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 
-**Theory:** [Hello Interview — Binary Search](https://www.hellointerview.com/learn/code/binary-search/overview)
+**Theory:** [Hello Interview — Binary Search](https://www.hellointerview.com/learn/code/binary-search/overview) · [GeeksforGeeks — Binary Search](https://www.geeksforgeeks.org/dsa/binary-search/)
 
 ## Problem
 Suppose an array of length `n` sorted in ascending order is **rotated** between `1` and `n` times. For example, the array `nums = [0,1,2,4,5,6,7]` might become:

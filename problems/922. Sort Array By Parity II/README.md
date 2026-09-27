@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy · **Topics:** Array, Two Pointers, Sorting · [LeetCode](https://leetcode.com/problems/sort-array-by-parity-ii/)
 
-**Theory:** [Hello Interview — Two Pointers](https://www.hellointerview.com/learn/code/two-pointers/overview)
+**Theory:** [Hello Interview — Two Pointers](https://www.hellointerview.com/learn/code/two-pointers/overview) · [GeeksforGeeks — Two Pointers](https://www.geeksforgeeks.org/dsa/two-pointers-technique/)
 
 ## Problem
 Given an array of integers `nums`, half of the integers in `nums` are **odd**, and the other half are **even**.

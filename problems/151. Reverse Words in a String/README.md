@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium · **Topics:** Two Pointers, String · [LeetCode](https://leetcode.com/problems/reverse-words-in-a-string/)
 
-**Theory:** [Hello Interview — Two Pointers](https://www.hellointerview.com/learn/code/two-pointers/overview)
+**Theory:** [Hello Interview — Two Pointers](https://www.hellointerview.com/learn/code/two-pointers/overview) · [GeeksforGeeks — Two Pointers](https://www.geeksforgeeks.org/dsa/two-pointers-technique/)
 
 ## Problem
 Given an input string `s`, reverse the order of the **words**.

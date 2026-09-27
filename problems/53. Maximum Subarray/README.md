@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium · **Topics:** Array, Divide and Conquer, Dynamic Programming · [LeetCode](https://leetcode.com/problems/maximum-subarray/)
 
-**Theory:** [Hello Interview — Dynamic Programming](https://www.hellointerview.com/learn/code/dynamic-programming/fundamentals)
+**Theory:** [Hello Interview — Dynamic Programming](https://www.hellointerview.com/learn/code/dynamic-programming/fundamentals) · [GeeksforGeeks — Kadane's Algorithm](https://www.geeksforgeeks.org/dsa/largest-sum-contiguous-subarray/)
 
 ## Problem
 Given an integer array `nums`, find the subarray with the largest sum, and return *its sum*.

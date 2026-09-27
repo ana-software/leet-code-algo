@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium · **Topics:** Array, Sorting, Quicksort · [LeetCode](https://leetcode.com/problems/merge-intervals/)
 
-**Theory:** [Hello Interview — Intervals (Merge Intervals)](https://www.hellointerview.com/learn/code/intervals/merge-intervals)
+**Theory:** [Hello Interview — Intervals (Merge Intervals)](https://www.hellointerview.com/learn/code/intervals/merge-intervals) · [GeeksforGeeks — Overlapping Intervals](https://www.geeksforgeeks.org/dsa/merging-intervals/)
 
 ## Problem
 Given an array of `intervals` where `intervals[i] = [start_i, end_i]`, merge all overlapping intervals, and return *an array of the non-overlapping intervals that cover all the intervals in the input*.

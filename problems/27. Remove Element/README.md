@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy · **Topics:** Array, Two Pointers · [LeetCode](https://leetcode.com/problems/remove-element/)
 
-**Theory:** [Hello Interview — Two Pointers](https://www.hellointerview.com/learn/code/two-pointers/move-zeroes)
+**Theory:** [Hello Interview — Two Pointers](https://www.hellointerview.com/learn/code/two-pointers/move-zeroes) · [GeeksforGeeks — Two Pointers](https://www.geeksforgeeks.org/dsa/two-pointers-technique/)
 
 ## Problem
 Given an integer array `nums` and an integer `val`, remove all occurrences of `val` in `nums` [**in-place**](https://en.wikipedia.org/wiki/In-place_algorithm). The order of the elements may be changed. Then return *the number of elements in* `nums` *which are not equal to* `val`.

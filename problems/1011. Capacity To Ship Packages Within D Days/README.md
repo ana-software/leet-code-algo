@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium · **Topics:** Array, Binary Search · [LeetCode](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)
 
-**Theory:** [Hello Interview — Binary Search](https://www.hellointerview.com/learn/code/binary-search/minimum-shipping-capacity)
+**Theory:** [Hello Interview — Binary Search](https://www.hellointerview.com/learn/code/binary-search/minimum-shipping-capacity) · [GeeksforGeeks — Binary Search on Answer](https://www.geeksforgeeks.org/dsa/binary-search-on-answer-tutorial-with-problems/)
 
 ## Problem
 A conveyor belt has packages that must be shipped from one port to another within `days` days.

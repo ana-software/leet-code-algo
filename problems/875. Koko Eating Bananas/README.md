@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium · **Topics:** Array, Binary Search · [LeetCode](https://leetcode.com/problems/koko-eating-bananas/)
 
-**Theory:** [Hello Interview — Binary Search](https://www.hellointerview.com/learn/code/binary-search/overview)
+**Theory:** [Hello Interview — Binary Search](https://www.hellointerview.com/learn/code/binary-search/overview) · [GeeksforGeeks — Binary Search on Answer](https://www.geeksforgeeks.org/dsa/binary-search-on-answer-tutorial-with-problems/)
 
 ## Problem
 Koko loves to eat bananas. There are `n` piles of bananas, the `i`th pile has `piles[i]` bananas. The guards have gone and will come back in `h` hours.

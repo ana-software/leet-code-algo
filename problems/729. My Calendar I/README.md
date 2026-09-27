@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium · **Topics:** Array, Binary Search, Design, Segment Tree, Ordered Set · [LeetCode](https://leetcode.com/problems/my-calendar-i/)
 
-**Theory:** [Hello Interview — Binary Search](https://www.hellointerview.com/learn/code/binary-search/overview) · [Hello Interview — Intervals](https://www.hellointerview.com/learn/code/intervals/overview)
+**Theory:** [Hello Interview — Binary Search](https://www.hellointerview.com/learn/code/binary-search/overview) · [Hello Interview — Intervals](https://www.hellointerview.com/learn/code/intervals/overview) · [GeeksforGeeks — Binary Search](https://www.geeksforgeeks.org/dsa/binary-search/) · [GeeksforGeeks — Overlapping Intervals](https://www.geeksforgeeks.org/dsa/merging-intervals/)
 
 ## Problem
 You are implementing a program to use as your calendar. We can add a new event if adding the event will not cause a **double booking**.

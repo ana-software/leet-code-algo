@@ -2,6 +2,8 @@
 
 **Difficulty:** Medium · **Topics:** Array, Hash Table, String, Sorting · [LeetCode](https://leetcode.com/problems/group-anagrams/)
 
+**Theory:** [GeeksforGeeks — Hashing](https://www.geeksforgeeks.org/dsa/hashing-data-structure/)
+
 ## Problem
 Given an array of strings `strs`, group the **anagrams** together. You can return the answer in **any order**.
 

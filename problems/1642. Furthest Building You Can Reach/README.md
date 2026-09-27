@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium · **Topics:** Array, Greedy, Heap (Priority Queue) · [LeetCode](https://leetcode.com/problems/furthest-building-you-can-reach/)
 
-**Theory:** [Hello Interview — Heap](https://www.hellointerview.com/learn/code/heap/overview) · [Hello Interview — Greedy](https://www.hellointerview.com/learn/code/greedy/overview)
+**Theory:** [Hello Interview — Heap](https://www.hellointerview.com/learn/code/heap/overview) · [Hello Interview — Greedy](https://www.hellointerview.com/learn/code/greedy/overview) · [GeeksforGeeks — Heap](https://www.geeksforgeeks.org/dsa/heap-data-structure/) · [GeeksforGeeks — Greedy](https://www.geeksforgeeks.org/dsa/greedy-algorithms/)
 
 ## Problem
 You are given an integer array `heights` representing the heights of buildings, some `bricks`, and some `ladders`.

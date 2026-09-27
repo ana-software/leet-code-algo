@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium · **Topics:** Array, Hash Table, Prefix Sum · [LeetCode](https://leetcode.com/problems/contiguous-array/)
 
-**Theory:** [Hello Interview — Prefix Sum](https://www.hellointerview.com/learn/code/prefix-sum/overview)
+**Theory:** [Hello Interview — Prefix Sum](https://www.hellointerview.com/learn/code/prefix-sum/overview) · [GeeksforGeeks — Prefix Sum](https://www.geeksforgeeks.org/dsa/prefix-sum-array-implementation-applications-competitive-programming/)
 
 ## Problem
 Given a binary array `nums`, return *the maximum length of a contiguous subarray with an equal number of* `0` *and* `1`.

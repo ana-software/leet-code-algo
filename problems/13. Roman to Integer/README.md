@@ -2,6 +2,8 @@
 
 **Difficulty:** Easy · **Topics:** Hash Table, Math, String · [LeetCode](https://leetcode.com/problems/roman-to-integer/)
 
+**Theory:** [GeeksforGeeks — Roman to Integer](https://www.geeksforgeeks.org/dsa/roman-number-to-integer/)
+
 ## Problem
 Roman numerals are represented by seven different symbols: `I`, `V`, `X`, `L`, `C`, `D` and `M`.
 

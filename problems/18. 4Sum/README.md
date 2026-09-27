@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium · **Topics:** Array, Two Pointers, Sorting · [LeetCode](https://leetcode.com/problems/4sum/)
 
-**Theory:** [Hello Interview — Two Pointers](https://www.hellointerview.com/learn/code/two-pointers/3-sum)
+**Theory:** [Hello Interview — Two Pointers](https://www.hellointerview.com/learn/code/two-pointers/3-sum) · [GeeksforGeeks — Two Pointers](https://www.geeksforgeeks.org/dsa/two-pointers-technique/)
 
 ## Problem
 Given an array `nums` of `n` integers, return *an array of all the **unique** quadruplets* `[nums[a], nums[b], nums[c], nums[d]]` such that:

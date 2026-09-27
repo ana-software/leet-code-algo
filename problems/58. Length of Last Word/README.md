@@ -2,6 +2,8 @@
 
 **Difficulty:** Easy · **Topics:** String · [LeetCode](https://leetcode.com/problems/length-of-last-word/)
 
+**Theory:** [GeeksforGeeks — Length of Last Word](https://www.geeksforgeeks.org/dsa/length-of-last-word-in-a-string/)
+
 ## Problem
 Given a string `s` consisting of words and spaces, return *the length of the **last** word in the string.*
 

@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium · **Topics:** Array, Two Pointers, Sorting · [LeetCode](https://leetcode.com/problems/3sum-closest/)
 
-**Theory:** [Hello Interview — Two Pointers](https://www.hellointerview.com/learn/code/two-pointers/3-sum)
+**Theory:** [Hello Interview — Two Pointers](https://www.hellointerview.com/learn/code/two-pointers/3-sum) · [GeeksforGeeks — Two Pointers](https://www.geeksforgeeks.org/dsa/two-pointers-technique/)
 
 ## Problem
 You are given an integer array `nums` of length `n` and an integer `target`.

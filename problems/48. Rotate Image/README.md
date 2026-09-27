@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium · **Topics:** Array, Math, Matrix · [LeetCode](https://leetcode.com/problems/rotate-image/)
 
-**Theory:** [Hello Interview — Matrices (Rotate Image)](https://www.hellointerview.com/learn/code/matrices/rotate-image)
+**Theory:** [Hello Interview — Matrices (Rotate Image)](https://www.hellointerview.com/learn/code/matrices/rotate-image) · [GeeksforGeeks — Rotate an Image 90 Degree Clockwise](https://www.geeksforgeeks.org/dsa/rotate-a-matrix-by-90-degree-in-clockwise-direction-without-using-any-extra-space/)
 
 ## Problem
 You are given an `n x n` 2D `matrix` representing an image, rotate the image by **90** degrees (clockwise).

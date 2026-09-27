@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium · **Topics:** Array, Math, Dynamic Programming, Prefix Sum · [LeetCode](https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/)
 
-**Theory:** [Hello Interview — Prefix Sum](https://www.hellointerview.com/learn/code/prefix-sum/overview)
+**Theory:** [Hello Interview — Prefix Sum](https://www.hellointerview.com/learn/code/prefix-sum/overview) · [GeeksforGeeks — Prefix Sum](https://www.geeksforgeeks.org/dsa/prefix-sum-array-implementation-applications-competitive-programming/)
 
 ## Problem
 Given an array of integers `arr`, return *the number of subarrays with an **odd** sum*.

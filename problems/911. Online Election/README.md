@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium · **Topics:** Array, Hash Table, Binary Search, Design · [LeetCode](https://leetcode.com/problems/online-election/)
 
-**Theory:** [Hello Interview — Binary Search](https://www.hellointerview.com/learn/code/binary-search/overview)
+**Theory:** [Hello Interview — Binary Search](https://www.hellointerview.com/learn/code/binary-search/overview) · [GeeksforGeeks — Binary Search](https://www.geeksforgeeks.org/dsa/binary-search/)
 
 ## Problem
 You are given two integer arrays `persons` and `times`. In an election, the `i`th vote was cast for `persons[i]` at time `times[i]`.

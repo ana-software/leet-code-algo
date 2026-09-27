@@ -78,7 +78,7 @@ If a folder for that number already exists (a folder in `problems/` starting wit
 
 **Difficulty:** {difficulty as the platform states it} · **Topics:** {tags} · [{Platform}]({url})
 
-**Theory:** [Hello Interview — {Pattern}]({lesson url})
+**Theory:** [Hello Interview — {Pattern}]({lesson url}) · [GeeksforGeeks — {Article}]({article url})
 
 ## Problem
 {Statement converted from HTML to Markdown, plus examples and constraints}
@@ -120,7 +120,26 @@ Link the Hello Interview lesson for the pattern that **your solution** uses (not
 | Trie | `trie/overview` |
 | Matrices | `matrices/spiral-matrix` |
 
-If a more specific lesson fits better, look for it on `https://www.hellointerview.com/learn/code`. If the solution combines two patterns, link both, separated by ` · `. Check every link with `curl -s -o /dev/null -w '%{http_code}' -L <url>` and use it only if it returns `200`. If no lesson matches the approach (e.g. a plain counting pass), leave the Theory line out.
+If a more specific lesson fits better, look for it on `https://www.hellointerview.com/learn/code`. If the solution combines two patterns, link both, separated by ` · `. Check every link with `curl -s -o /dev/null -w '%{http_code}' -L <url>` and use it only if it returns `200`. If no lesson matches the approach (e.g. a plain counting pass), leave the Hello Interview link out.
+
+Then add a GeeksforGeeks link after the Hello Interview ones, separated by ` · `. Every problem gets one, so the Theory line is never left out. Link the article for the same pattern; the articles live under `https://www.geeksforgeeks.org/dsa/`. Known pages:
+
+| Pattern | Path |
+|---|---|
+| Hash Map | `hashing-data-structure` |
+| Two Pointers | `two-pointers-technique` |
+| Sliding Window (fixed or variable size) | `window-sliding-technique` |
+| Prefix Sum | `prefix-sum-array-implementation-applications-competitive-programming` |
+| Binary Search | `binary-search` |
+| Binary Search on the answer (e.g. minimum capacity, minimum speed) | `binary-search-on-answer-tutorial-with-problems` |
+| Intervals | `merging-intervals` |
+| Heap | `heap-data-structure` |
+| Greedy | `greedy-algorithms` |
+| Dynamic Programming | `dynamic-programming` |
+| Kadane's algorithm | `largest-sum-contiguous-subarray` |
+| Fast exponentiation | `binary-exponentiation-for-competitive-programming` |
+
+When the solution has no general pattern (e.g. a plain single pass or simulation), or GeeksforGeeks has an article for this exact problem that explains the approach better, link that article instead (e.g. `roman-number-to-integer`, `fizz-buzz-implementation`). Name the link after the article's title. Check it with `curl -s -L -A 'Mozilla/5.0' <url> | grep -o '<title>[^<]*'`: use it only if the title is the article's, not a 404 or the home page.
 
 ## 4. solution.ts
 
@@ -180,7 +199,7 @@ Run `npx tsx "problems/{folder}/solution.test.ts"` from the repo root. If a case
 
 ## 6b. Update the problems index
 
-Add a row for each new problem to the table in `problems/README.md`, keeping rows grouped by topic: in the same topic order as the "Problems by pattern" table in the root README, and by number within a topic (a problem with two patterns goes under whichever comes first in that order; a new topic goes at the end). The Problem cell is `[{number}. {Title}]` (there is no separate number column) and links to the folder relative to `problems/`, i.e. `{folder}/` (URL-encode spaces as `%20`). The Pattern cell is the Theory link from the problem's README, or a short plain-text name of the approach when there is no Theory link.
+Add a row for each new problem to the table in `problems/README.md`, keeping rows grouped by topic: in the same topic order as the "Problems by pattern" table in the root README, and by number within a topic (a problem with two patterns goes under whichever comes first in that order; a new topic goes at the end). The Problem cell is `[{number}. {Title}]` (there is no separate number column) and links to the folder relative to `problems/`, i.e. `{folder}/` (URL-encode spaces as `%20`). The Pattern cell is the Hello Interview link(s) from the problem's Theory line, or a short plain-text name of the approach when there is no Hello Interview link.
 
 ## 7. Report
 
