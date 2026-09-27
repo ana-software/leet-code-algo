@@ -78,7 +78,7 @@ If a folder for that number already exists (a folder in `problems/` starting wit
 
 **Difficulty:** {difficulty as the platform states it} · **Topics:** {tags} · [{Platform}]({url})
 
-**Theory:** [Hello Interview — {Pattern}]({lesson url}) · [GeeksforGeeks — {Article}]({article url})
+**Theory:** [Hello Interview — {Pattern}]({lesson url}) · [GeeksforGeeks — {Article}]({article url}) · [Structy — {Name}](https://structy.net/problems/{slug})
 
 ## Problem
 {Statement converted from HTML to Markdown, plus examples and constraints}
@@ -146,6 +146,14 @@ Then add a GeeksforGeeks link after the Hello Interview ones, separated by ` · 
 | Fast exponentiation | `binary-exponentiation-for-competitive-programming` |
 
 When the solution has no general pattern (e.g. a plain single pass or simulation), or GeeksforGeeks has an article for this exact problem that explains the approach better, link that article instead (e.g. `roman-number-to-integer`, `fizz-buzz-implementation`). Name the link after the article's title. Check it with `curl -s -L -A 'Mozilla/5.0' <url> | grep -o '<title>[^<]*'`: use it only if the title is the article's, not a 404 or the home page.
+
+Finally add a Structy link, separated by ` · `. Structy's pages load with JavaScript, so read its catalogue from the API instead: `curl -s https://api.structy.net/api/problems` returns every page with `slug`, `name`, `module`, `type` (`challenge` or `lecture`), `verbose` (a one-line description) and `premium`. Skip pages where `premium` is true. From the free ones, pick, in order of preference:
+
+1. A challenge that is the same problem or a close variant (e.g. `pair-sum` for Two Sum, `count-substring-anagrams` for Find All Anagrams).
+2. Otherwise the lecture or welcome page of the module for the solution's pattern (e.g. `two-pointer-welcome`, `binary-search-welcome`, `sliding-window-variable-size-recipe`).
+3. If no free page fits (e.g. a matrix or math trick, or the module is premium only), leave the Structy link out.
+
+The URL is `https://structy.net/problems/{slug}`. Name the link after the page in title case (`Structy — Pair Sum`), or after the module for a welcome page (`Structy — Two Pointer`).
 
 ## 4. solution.ts
 

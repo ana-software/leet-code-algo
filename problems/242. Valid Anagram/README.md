@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy · **Topics:** Hash Table, String, Sorting · [LeetCode](https://leetcode.com/problems/valid-anagram/)
 
-**Theory:** [GeeksforGeeks — Hashing](https://www.geeksforgeeks.org/dsa/hashing-data-structure/)
+**Theory:** [GeeksforGeeks — Hashing](https://www.geeksforgeeks.org/dsa/hashing-data-structure/) · [Structy — Anagrams](https://structy.net/problems/anagrams)
 
 ## Problem
 Given two strings `s` and `t`, return `true` if `t` is an **anagram** of `s`, and `false` otherwise.

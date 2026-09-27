@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy · **Topics:** Math, String, Simulation · [LeetCode](https://leetcode.com/problems/fizz-buzz/)
 
-**Theory:** [GeeksforGeeks — Fizz Buzz](https://www.geeksforgeeks.org/dsa/fizz-buzz-implementation/)
+**Theory:** [GeeksforGeeks — Fizz Buzz](https://www.geeksforgeeks.org/dsa/fizz-buzz-implementation/) · [Structy — Fizz Buzz](https://structy.net/problems/fizz-buzz)
 
 ## Problem
 Given an integer `n`, return *a string array* `answer` *(**1-indexed**) where*:

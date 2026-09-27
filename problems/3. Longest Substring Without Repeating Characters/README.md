@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium · **Topics:** Hash Table, String, Sliding Window · [LeetCode](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
-**Theory:** [Hello Interview — Sliding Window (variable size)](https://www.hellointerview.com/learn/code/sliding-window/longest-substring-without-repeating-characters) · [GeeksforGeeks — Sliding Window](https://www.geeksforgeeks.org/dsa/window-sliding-technique/)
+**Theory:** [Hello Interview — Sliding Window (variable size)](https://www.hellointerview.com/learn/code/sliding-window/longest-substring-without-repeating-characters) · [GeeksforGeeks — Sliding Window](https://www.geeksforgeeks.org/dsa/window-sliding-technique/) · [Structy — Longest Unique Substring](https://structy.net/problems/longest-unique-substring)
 
 ## Problem
 Given a string `s`, find the length of the **longest** **substring** without duplicate characters.

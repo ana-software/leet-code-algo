@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy · **Topics:** Array, Hash Table · [LeetCode](https://leetcode.com/problems/two-sum/)
 
-**Theory:** [GeeksforGeeks — Hashing](https://www.geeksforgeeks.org/dsa/hashing-data-structure/)
+**Theory:** [GeeksforGeeks — Hashing](https://www.geeksforgeeks.org/dsa/hashing-data-structure/) · [Structy — Pair Sum](https://structy.net/problems/pair-sum)
 
 ## Problem
 You are given an array of integers `nums` and an integer `target`, return *indices of the two numbers such that they add up to `target`*.

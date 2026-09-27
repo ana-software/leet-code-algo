@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium · **Topics:** Hash Table, String, Sliding Window · [LeetCode](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
 
-**Theory:** [Hello Interview — Sliding Window (fixed size)](https://www.hellointerview.com/learn/code/sliding-window/fixed-length) · [GeeksforGeeks — Sliding Window](https://www.geeksforgeeks.org/dsa/window-sliding-technique/)
+**Theory:** [Hello Interview — Sliding Window (fixed size)](https://www.hellointerview.com/learn/code/sliding-window/fixed-length) · [GeeksforGeeks — Sliding Window](https://www.geeksforgeeks.org/dsa/window-sliding-technique/) · [Structy — Count Substring Anagrams](https://structy.net/problems/count-substring-anagrams)
 
 ## Problem
 Given two strings `s` and `p`, return an array of all the start indices of `p`'s anagrams in `s`. You may return the answer in **any order**.
