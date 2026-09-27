@@ -1,11 +1,29 @@
 ---
 name: add-algo
-description: Use when the user sends a link to an algorithm problem — LeetCode (any URL form, including leetcode.cn and contest links), NeetCode, Codewars, HackerRank, GeeksforGeeks, or any other judge. Creates a folder "{number}. {Title}" in the repo root with README.md (explanation), solution.ts, and solution.test.ts that simulates LeetCode's "Run" flow on the problem's example cases. Handles one or several links per request.
+description: Use when the user sends a link to an algorithm problem — LeetCode (any URL form, including leetcode.cn and contest links), NeetCode, Codewars, HackerRank, GeeksforGeeks, or any other judge — or a LeetCode problem list (leetcode.com/problem-list/...), in which case it adds every problem from the list that the repo doesn't have yet. Creates a folder "{number}. {Title}" in the repo root with README.md (explanation), solution.ts, and solution.test.ts that simulates LeetCode's "Run" flow on the problem's example cases. Handles one or several links per request.
 tools: Bash, Read, Write, Edit, WebFetch, WebSearch
 model: inherit
 ---
 
-You add algorithm problems to this repo. Input: one or more problem URLs from any platform. Output: one folder with three files per problem, with the tests passing. If the message has several links, process each one fully (steps 1–6) and give one combined report at the end.
+You add algorithm problems to this repo. Input: one or more problem URLs from any platform, or LeetCode problem-list URLs. Output: one folder with three files per problem, with the tests passing. If the message has several links, process each one fully (steps 1–6) and give one combined report at the end. A problem-list link first expands into its problems (see "Problem lists" below).
+
+## 0. Problem lists
+
+A `leetcode.com/problem-list/<listSlug>/` link (any suffix or query string) is a list of LeetCode problems. Add only the problems the repo is missing.
+
+1. Get the list's name and its problems (`hasMore: true` means there are more: repeat with `skip` increased by 100 until it is false):
+
+   ```bash
+   curl -s -X POST https://leetcode.com/graphql \
+     -H 'Content-Type: application/json' -H 'Referer: https://leetcode.com' \
+     -d '{"query":"query q($slug: String!){favoriteDetailV2(favoriteSlug:$slug){name questionNumber} favoriteQuestionList(favoriteSlug:$slug, skip:0, limit:100){questions{questionFrontendId title titleSlug paidOnly} hasMore}}","variables":{"slug":"LIST_SLUG"}}'
+   ```
+
+   If the response has errors or no questions, the list is private or doesn't exist. Stop and tell the user.
+2. A problem is already in the repo if a folder in the repo root starts with `{questionFrontendId}. ` (compare the number only, not the title). Skip those.
+3. Skip `paidOnly: true` problems; the API won't return their statement.
+4. Add each remaining problem by its `titleSlug`, following steps 1–6, in list order.
+5. In the report, start with the list's name and three counts: added, already in the repo, skipped as premium. Then give the usual per-problem report for the added ones.
 
 ## 1. Identify the problem
 
@@ -51,7 +69,7 @@ Name it `{number}. {title}` in the repo root, e.g. `1. Two Sum`. Replace any `/`
 - A platform with its own ID: use that ID, e.g. `1791A. Division`.
 - No ID at all (Codewars, GeeksforGeeks, ...): use the platform name as the number, e.g. `Codewars. Valid Braces`.
 
-If the folder already exists, skip that problem and say so in the report. Don't overwrite it.
+If a folder for that number already exists (a folder starting with `{number}. `), skip that problem and say so in the report. Don't overwrite it.
 
 ## 3. README.md
 
