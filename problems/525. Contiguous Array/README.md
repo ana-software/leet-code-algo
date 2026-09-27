@@ -35,7 +35,10 @@ Explanation: [1,1,1,0,0,0] is the longest contiguous subarray with equal number 
 ## Approach
 Checking every subarray is O(n²), about 5 · 10⁹ pairs at n = 10⁵ — too slow. A sliding window doesn't work either, because there's no rule for when to shrink it.
 
-Key insight: count a `1` as `+1` and a `0` as `−1`. A subarray has equal 0s and 1s exactly when its sum is 0, which means the running sum (`balance`) is **the same** at both ends. So for every index, the longest balanced subarray ending there starts right after the **first** index where the same balance appeared.
+> [!IMPORTANT]
+> **Key insight: treat 0 as −1; a balanced subarray is one where the running sum repeats, so remember where each sum first appeared.**
+>
+> Count a `1` as `+1` and a `0` as `−1`. A subarray has equal 0s and 1s exactly when its sum is 0, which means the running sum (`balance`) is **the same** at both ends. So for every index, the longest balanced subarray ending there starts right after the **first** index where the same balance appeared.
 
 1. Keep a map `balance → first index where it appeared`, starting with `{0: -1}` (the empty prefix, so subarrays starting at index 0 are counted).
 2. For each index `i`, update `balance` by `+1` or `−1`.

@@ -35,7 +35,10 @@ Explanation: The sum that is closest to the target is 0. (0 + 0 + 0 = 0).
 ## Approach
 Trying every triple is O(n³), about 2 · 10⁷ triples at n = 500. That may pass, but the sorted two-pointer scan from 3Sum does it in O(n²).
 
-Key insight: after **sorting**, fix the first number `nums[i]` and look for the other two in `nums[i+1..n-1]` with two pointers. If the current sum is too small, only moving `lo` right can make it bigger; if it's too big, only moving `hi` left can make it smaller. Each move gets closer to the target (or rules out a pair that can't be better), so no candidate is missed.
+> [!IMPORTANT]
+> **Key insight: sort, fix one number, then close in on the other two with two pointers.**
+>
+> After **sorting**, fix the first number `nums[i]` and look for the other two in `nums[i+1..n-1]` with two pointers. If the current sum is too small, only moving `lo` right can make it bigger; if it's too big, only moving `hi` left can make it smaller. Each move gets closer to the target (or rules out a pair that can't be better), so no candidate is missed.
 
 1. Sort `nums`. Start `best` with the sum of the first three numbers.
 2. For each `i` from `0` to `n − 3`, set `lo = i + 1`, `hi = n − 1`. While `lo < hi`:

@@ -52,7 +52,10 @@ Output: 3
 ## Approach
 Trying every choice of "bricks or ladder" for each climb is exponential. And a greedy that decides on the spot (e.g. "use bricks while you have them") fails, because a huge climb later may need the ladder you already used.
 
-Key insight: a ladder covers any height, so it is best spent on the **largest** climbs. Bricks should pay for the rest. We don't know the future, but we can **decide provisionally and fix it later**:
+> [!IMPORTANT]
+> **Key insight: spend ladders on the largest climbs: use a ladder provisionally, and give the smallest one back for bricks when you run out.**
+>
+> A ladder covers any height, so it is best spent on the **largest** climbs. Bricks should pay for the rest. We don't know the future, but we can **decide provisionally and fix it later**:
 
 1. Walk building by building. Skip steps that go down or stay level.
 2. For each climb, **tentatively use a ladder**: push the climb onto a **min-heap** of climbs covered by ladders.

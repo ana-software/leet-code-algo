@@ -34,7 +34,10 @@ Output: 4
 - `-10^4 <= target <= 10^4`
 
 ## Approach
-Both answers ("where it is" and "where it would go") are the same index: the **first position whose value is `>= target`**. This is the classic *lower bound* search.
+> [!IMPORTANT]
+> **Key insight: the answer is the first index with a value `>= target`: a lower-bound binary search.**
+>
+> Both answers ("where it is" and "where it would go") are the same index: the **first position whose value is `>= target`**. This is the classic *lower bound* search.
 
 A linear scan finds it in O(n), but the problem asks for O(log n), and the array is sorted, so binary search works:
 

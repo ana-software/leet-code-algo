@@ -33,7 +33,10 @@ Output: 44
 ## Approach
 Checking one divisor costs O(n). Trying every divisor from 1 up to `max(nums)` (up to 10⁶) would be O(n · 10⁶), too slow.
 
-Key insight (**binary search on the answer**): a larger divisor never makes the sum larger. So "is the sum ≤ threshold for divisor `d`?" is *no, …, no, yes, …, yes*, and we want the first *yes*.
+> [!IMPORTANT]
+> **Key insight (binary search on the answer): a larger divisor never makes the sum larger, so binary search for the smallest divisor that works.**
+>
+> The question "is the sum ≤ threshold for divisor `d`?" is *no, …, no, yes, …, yes*, and we want the first *yes*.
 
 1. Search `d` in `[1, max(nums)]`. At `d = max(nums)` every term is 1, so the sum is `nums.length <= threshold`: that divisor always works.
 2. For `mid`, compute `Σ ceil(x / mid)`.

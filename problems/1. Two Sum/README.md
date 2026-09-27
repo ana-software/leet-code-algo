@@ -39,7 +39,10 @@ Output: [0,1]
 **Follow-up:** Can you come up with an algorithm that is less than `O(n^2)` time complexity?
 
 ## Approach
-For each number `x`, the partner we need is `target − x`. Checking every pair is O(n²) (up to ~5·10⁷ pairs). Instead, remember every number we have already seen in a hash map `value → index`; then "have I seen the partner?" is an O(1) lookup.
+> [!IMPORTANT]
+> **Key insight: remember what you've seen; then the partner `target − x` is an O(1) hash map lookup.**
+>
+> For each number `x`, the partner we need is `target − x`. Checking every pair is O(n²) (up to ~5·10⁷ pairs). Instead, remember every number we have already seen in a hash map `value → index`; then "have I seen the partner?" is an O(1) lookup.
 
 1. Walk through `nums` with index `i`.
 2. Compute `need = target − nums[i]`. If `need` is in the map, return `[map[need], i]`.

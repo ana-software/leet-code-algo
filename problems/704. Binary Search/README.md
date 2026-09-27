@@ -30,7 +30,10 @@ Explanation: 2 does not exist in nums so return -1
 - `nums` is sorted in ascending order.
 
 ## Approach
-A linear scan is O(n). Because the array is sorted, one comparison with the middle element tells us which half can still contain `target`, so we can throw the other half away.
+> [!IMPORTANT]
+> **Key insight: one comparison with the middle element rules out half the range.**
+>
+> A linear scan is O(n). Because the array is sorted, one comparison with the middle element tells us which half can still contain `target`, so we can throw the other half away.
 
 1. Keep a closed range `[lo, hi]`, starting with the whole array.
 2. While `lo <= hi`, look at `mid`:

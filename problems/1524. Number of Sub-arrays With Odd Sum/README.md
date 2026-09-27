@@ -40,7 +40,10 @@ Output: 16
 ## Approach
 Summing every subarray is O(n²), about 5 · 10⁹ subarrays at n = 10⁵ — too slow.
 
-Key insight: the sum of `arr[i+1..j]` is `prefix[j] − prefix[i]`, and a difference is odd exactly when the two prefix sums have **different parity**. So we don't need the prefix sums themselves, only how many earlier prefixes were even and how many were odd.
+> [!IMPORTANT]
+> **Key insight: a subarray sum is odd exactly when its two prefix sums have different parity, so just count even and odd prefixes.**
+>
+> The sum of `arr[i+1..j]` is `prefix[j] − prefix[i]`, and a difference is odd exactly when the two prefix sums have **different parity**. So we don't need the prefix sums themselves, only how many earlier prefixes were even and how many were odd.
 
 1. Keep `even = 1` (the empty prefix, sum 0) and `odd = 0`, and a running `prefix` sum.
 2. For each element, add it to `prefix`.

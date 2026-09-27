@@ -28,7 +28,10 @@ Output: [0]
 **Follow up:** Could you minimize the total number of operations done?
 
 ## Approach
-Use two pointers moving in the same direction: `write` marks where the next non-zero element belongs, and `read` scans the array.
+> [!IMPORTANT]
+> **Key insight: swap each non-zero to the write pointer; the zeros get pushed behind.**
+>
+> Use two pointers moving in the same direction: `write` marks where the next non-zero element belongs, and `read` scans the array.
 
 1. `write = 0`.
 2. For each `read` from `0` to `n − 1`: if `nums[read] != 0`, swap `nums[read]` with `nums[write]` and advance `write`.

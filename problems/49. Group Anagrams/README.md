@@ -35,9 +35,12 @@ Output: [["a"]]
 - `strs[i]` consists of lowercase English letters.
 
 ## Approach
-Comparing every pair of strings is O(n²·k). Instead give every string a **canonical key** that is identical for all its anagrams, and bucket strings by key in a hash map.
-
-The key is the string's letter counts, e.g. `"eat"` → `"1#0#0#0#1#...#1#..."`. Counting is O(k) per string, faster than sorting the letters (O(k log k)), and the `#` separator keeps counts like `1,11` and `11,1` apart.
+> [!IMPORTANT]
+> **Key insight: all anagrams share the same letter counts, so use them as a hash map key.**
+>
+> Comparing every pair of strings is O(n²·k). Instead give every string a **canonical key** that is identical for all its anagrams, and bucket strings by key in a hash map.
+>
+> The key is the string's letter counts, e.g. `"eat"` → `"1#0#0#0#1#...#1#..."`. Counting is O(k) per string, faster than sorting the letters (O(k log k)), and the `#` separator keeps counts like `1,11` and `11,1` apart.
 
 1. For each string, count its 26 letters and join the counts into a key.
 2. Append the string to `groups[key]`.

@@ -31,7 +31,10 @@ Explanation: In this case, no transactions are done and the max profit = 0.
 - `0 <= prices[i] <= 10^4`
 
 ## Approach
-Trying every buy/sell pair is O(n²), up to 5·10⁹ pairs. But if we decide to sell on day `i`, the best buy day is simply the **cheapest day before it**. So one pass is enough, as long as we carry the minimum price seen so far.
+> [!IMPORTANT]
+> **Key insight: the best day to buy before selling on day `i` is the cheapest day so far, so track the running minimum.**
+>
+> Trying every buy/sell pair is O(n²), up to 5·10⁹ pairs. But if we decide to sell on day `i`, the best buy day is simply the **cheapest day before it**. So one pass is enough, as long as we carry the minimum price seen so far.
 
 1. `minPrice = prices[0]`, `best = 0`.
 2. For each later price `p`: update `best = max(best, p − minPrice)`, then `minPrice = min(minPrice, p)`.

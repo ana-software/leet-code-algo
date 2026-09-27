@@ -25,7 +25,8 @@ Output: 2
 - `nums[i]` is either `0` or `1`.
 
 ## Approach
-Scan once, keeping the length of the current run of 1s:
+> [!IMPORTANT]
+> **Key insight: keep the length of the current run of 1s, and reset it on every 0.**
 
 1. `cur = 0`, `best = 0`.
 2. For each element: if it is `1`, increment `cur` and update `best = max(best, cur)`; if it is `0`, the run is broken, so reset `cur = 0`.

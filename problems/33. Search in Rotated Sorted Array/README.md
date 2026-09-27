@@ -41,7 +41,10 @@ Output: -1
 ## Approach
 A linear scan is O(n); the problem requires O(log n). Plain binary search doesn't work directly, because the array as a whole isn't sorted.
 
-Key insight: split the range at `mid`. **At least one of the two halves is always sorted**, because the rotation point can only be in one of them. On a sorted half, a simple range check tells us whether `target` is inside it.
+> [!IMPORTANT]
+> **Key insight: one half around `mid` is always sorted, so check whether `target` falls inside it.**
+>
+> Split the range at `mid`. **At least one of the two halves is always sorted**, because the rotation point can only be in one of them. On a sorted half, a simple range check tells us whether `target` is inside it.
 
 1. If `nums[mid] === target`, return `mid`.
 2. If `nums[lo] <= nums[mid]`, the **left half** `lo..mid` is sorted:

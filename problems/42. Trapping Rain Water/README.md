@@ -31,10 +31,13 @@ Output: 9
 ## Approach
 The water above bar `i` is `min(maxLeft(i), maxRight(i)) − height[i]`, where `maxLeft` / `maxRight` are the tallest bars on each side (including `i`). Scanning left and right for every bar is O(n²). Precomputing both max arrays makes it O(n) time but O(n) extra space.
 
-Key insight: we don't need both maxima exactly, only the **smaller** one. Put a pointer at each end and track `leftMax` and `rightMax` seen so far.
-
-- We always move the pointer at the **shorter** bar, so the taller bar seen so far stays under one of the pointers. When `height[l] < height[r]`, that means `leftMax ≤ max(height[r..n−1])`: the right side of `l` has a wall at least as tall as `leftMax`. So `min(maxLeft(l), maxRight(l)) = leftMax`, and the water at `l` is `leftMax − height[l]`.
-- Otherwise the same argument works for `r` with `rightMax`.
+> [!IMPORTANT]
+> **Key insight: the water at a bar depends only on the smaller of the two maxima, so always process the shorter side.**
+>
+> We don't need both maxima exactly, only the **smaller** one. Put a pointer at each end and track `leftMax` and `rightMax` seen so far.
+>
+> - We always move the pointer at the **shorter** bar, so the taller bar seen so far stays under one of the pointers. When `height[l] < height[r]`, that means `leftMax ≤ max(height[r..n−1])`: the right side of `l` has a wall at least as tall as `leftMax`. So `min(maxLeft(l), maxRight(l)) = leftMax`, and the water at `l` is `leftMax − height[l]`.
+> - Otherwise the same argument works for `r` with `rightMax`.
 
 1. `l = 0`, `r = n − 1`, `leftMax = rightMax = 0`, `water = 0`.
 2. While `l < r`:

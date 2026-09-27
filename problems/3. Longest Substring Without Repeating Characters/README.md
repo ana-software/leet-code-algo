@@ -34,9 +34,12 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 - `s` consists of English letters, digits, symbols and spaces.
 
 ## Approach
-Checking every substring for duplicates is O(n²) or worse. Instead keep a window `[left, right]` that never contains a duplicate, and grow it one character at a time.
-
-Store the last index where each character was seen. When `s[right]` was last seen at an index `≥ left`, it is inside the window, so jump `left` straight past it (`left = last[s[right]] + 1`). This avoids shrinking one step at a time.
+> [!IMPORTANT]
+> **Key insight: keep a window with no duplicates; on a repeat, jump `left` straight past the character's last occurrence.**
+>
+> Checking every substring for duplicates is O(n²) or worse. Instead keep a window `[left, right]` that never contains a duplicate, and grow it one character at a time.
+>
+> Store the last index where each character was seen. When `s[right]` was last seen at an index `≥ left`, it is inside the window, so jump `left` straight past it (`left = last[s[right]] + 1`). This avoids shrinking one step at a time.
 
 1. `left = 0`, `best = 0`, `last = new Map()`.
 2. For each `right`: if `last[s[right]] >= left`, set `left = last[s[right]] + 1`.

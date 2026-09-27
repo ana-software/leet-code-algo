@@ -47,13 +47,16 @@ Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
 ## Approach
 A rotated sorted array is two sorted runs, and the minimum is the first element of the second run (the "drop"). Scanning for it is O(n); the problem asks for O(log n).
 
-Key insight: compare `nums[mid]` with the **last element of the range**, `nums[hi]`.
-- `nums[mid] > nums[hi]`: the values drop somewhere after `mid`, so the minimum is **strictly right** of `mid`: `lo = mid + 1`.
-- `nums[mid] < nums[hi]`: `mid..hi` is sorted, so nothing to the right of `mid` is smaller. The minimum is **`mid` or left of it**: `hi = mid`.
-
-Values are unique, and `mid < hi` inside the loop, so they are never equal. When `lo === hi`, `nums[lo]` is the minimum.
-
-Comparing with `nums[hi]` (not `nums[lo]`) also handles an array that isn't rotated at all (Example 3): every step takes the `hi = mid` branch.
+> [!IMPORTANT]
+> **Key insight: compare `nums[mid]` with `nums[hi]` to tell which side the drop (the minimum) is on.**
+>
+> Compare `nums[mid]` with the **last element of the range**, `nums[hi]`.
+> - `nums[mid] > nums[hi]`: the values drop somewhere after `mid`, so the minimum is **strictly right** of `mid`: `lo = mid + 1`.
+> - `nums[mid] < nums[hi]`: `mid..hi` is sorted, so nothing to the right of `mid` is smaller. The minimum is **`mid` or left of it**: `hi = mid`.
+>
+> Values are unique, and `mid < hi` inside the loop, so they are never equal. When `lo === hi`, `nums[lo]` is the minimum.
+>
+> Comparing with `nums[hi]` (not `nums[lo]`) also handles an array that isn't rotated at all (Example 3): every step takes the `hi = mid` branch.
 
 ## Walkthrough
 `nums = [3,4,5,1,2]`

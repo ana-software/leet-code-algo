@@ -56,7 +56,10 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 - `0 <= val <= 100`
 
 ## Approach
-Deleting each `val` with `splice` shifts the rest of the array every time, which is O(n²). Instead, use a **read pointer** and a **write pointer** (the same idea as Move Zeroes).
+> [!IMPORTANT]
+> **Key insight: copy the kept values forward with a write pointer instead of deleting.**
+>
+> Deleting each `val` with `splice` shifts the rest of the array every time, which is O(n²). Instead, use a **read pointer** and a **write pointer** (the same idea as Move Zeroes).
 
 1. `k` is the write pointer: the next slot for a value we keep. Start it at 0.
 2. Scan every element with the read pointer. If it isn't `val`, copy it to `nums[k]` and increment `k`.

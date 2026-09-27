@@ -53,7 +53,10 @@ Explanation:
 ## Approach
 For a fixed capacity, the number of days is easy to count greedily: load packages in order and start a new day whenever the next one doesn't fit. That costs O(n). Trying every capacity one by one could take up to 2.5·10⁷ tries, far too slow.
 
-Key insight (**binary search on the answer**): a bigger ship never needs more days. So "can we ship within `days` at capacity `c`?" is *no, …, no, yes, …, yes*, and we want the first *yes*.
+> [!IMPORTANT]
+> **Key insight (binary search on the answer): a bigger ship never needs more days, so binary search for the smallest capacity that works.**
+>
+> The question "can we ship within `days` at capacity `c`?" is *no, …, no, yes, …, yes*, and we want the first *yes*.
 
 1. The capacity is at least `max(weights)` (every package must fit) and at most `sum(weights)` (everything in one day).
 2. For `mid`, count the days greedily.

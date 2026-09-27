@@ -33,9 +33,12 @@ Explanation: The array has one each of 0, 1, and 2, arranged in-place in the ord
 **Follow up:** Could you come up with a one-pass algorithm using only constant extra space?
 
 ## Approach
-Counting the 0s, 1s and 2s and rewriting the array works but takes two passes. The one-pass answer is Dijkstra's **Dutch National Flag** partition with three pointers:
-
-- `[0, low)` holds 0s, `[low, mid)` holds 1s, `(high, n−1]` holds 2s, and `[mid, high]` is still unknown.
+> [!IMPORTANT]
+> **Key insight: Dutch National Flag: three pointers split the array into 0s, 1s, unknown, and 2s.**
+>
+> Counting the 0s, 1s and 2s and rewriting the array works but takes two passes. The one-pass answer is Dijkstra's **Dutch National Flag** partition with three pointers:
+>
+> - `[0, low)` holds 0s, `[low, mid)` holds 1s, `(high, n−1]` holds 2s, and `[mid, high]` is still unknown.
 
 While `mid <= high`, look at `nums[mid]`:
 1. `0` → swap with `nums[low]`, advance both `low` and `mid` (the swapped-in value is a known 1, or the same 0).

@@ -33,7 +33,10 @@ Output: [[2,2,2,2]]
 ## Approach
 Trying every four indices is O(n⁴), about 1.6 · 10⁹ combinations at n = 200 — too slow, and it still needs extra work to drop duplicate quadruplets.
 
-Key insight: this is 3Sum with one more outer loop. After **sorting**, fix the first two numbers and find the last two with the classic Two Sum II two-pointer scan. Sorting also makes duplicates adjacent, so they are easy to skip.
+> [!IMPORTANT]
+> **Key insight: 4Sum is 3Sum with one more loop: sort, fix two numbers, two-pointer the last two.**
+>
+> This is 3Sum with one more outer loop. After **sorting**, fix the first two numbers and find the last two with the classic Two Sum II two-pointer scan. Sorting also makes duplicates adjacent, so they are easy to skip.
 
 1. Sort `nums`.
 2. For each `i` (first number), skip it if `nums[i] === nums[i-1]` (same first number, same results).

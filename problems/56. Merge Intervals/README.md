@@ -34,7 +34,10 @@ Explanation: Intervals [1,4] and [4,7] are considered overlapping.
 - `0 <= start_i <= end_i <= 10^4`
 
 ## Approach
-Comparing every pair of intervals is O(n²) and merges can cascade. After **sorting by start**, any interval that overlaps the current merged block must come right after it, so a single scan suffices.
+> [!IMPORTANT]
+> **Key insight: after sorting by start, every overlapping interval comes right after the block it merges into.**
+>
+> Comparing every pair of intervals is O(n²) and merges can cascade. After **sorting by start**, any interval that overlaps the current merged block must come right after it, so a single scan suffices.
 
 1. Sort intervals by start.
 2. Push the first interval to `result`.

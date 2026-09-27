@@ -31,11 +31,14 @@ Output: [0,0,9,0,0]
 **Follow up:** Can you solve the problem in `O(1)` extra space complexity? (The output array **does not** count as extra space for space complexity analysis.)
 
 ## Approach
-Multiplying everything else for each `i` is O(n²), and "total product ÷ nums[i]" is forbidden (and breaks on zeros). The product of everything except `nums[i]` splits into two parts:
-
-`answer[i] = (product of nums[0..i−1]) × (product of nums[i+1..n−1])`
-
-These are **prefix and suffix products**, the multiplicative version of prefix sums.
+> [!IMPORTANT]
+> **Key insight: `answer[i]` = product of everything to its left × product of everything to its right.**
+>
+> Multiplying everything else for each `i` is O(n²), and "total product ÷ nums[i]" is forbidden (and breaks on zeros). The product of everything except `nums[i]` splits into two parts:
+>
+> `answer[i] = (product of nums[0..i−1]) × (product of nums[i+1..n−1])`
+>
+> These are **prefix and suffix products**, the multiplicative version of prefix sums.
 
 1. Left pass: `answer[i]` = product of everything to the left of `i` (start with 1).
 2. Right pass: walk from the end with a running `suffix` product; multiply `answer[i] *= suffix`, then `suffix *= nums[i]`.

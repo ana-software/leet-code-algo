@@ -36,7 +36,10 @@ Explanation: 2^-2 = 1/2^2 = 1/4 = 0.25
 ## Approach
 Multiplying `x` by itself `n` times is O(n). With `n` up to about 2·10⁹, that is too slow.
 
-Key insight (**binary / fast exponentiation**): write `n` in binary. For example, `10 = 1010₂ = 8 + 2`, so `x^10 = x^8 · x^2`. The powers `x, x², x⁴, x⁸, …` come from squaring the previous one, so we only need about log₂ n squarings.
+> [!IMPORTANT]
+> **Key insight (binary / fast exponentiation): square instead of multiplying: `x^n` needs only about log₂ n squarings.**
+>
+> Write `n` in binary. For example, `10 = 1010₂ = 8 + 2`, so `x^10 = x^8 · x^2`. The powers `x, x², x⁴, x⁸, …` come from squaring the previous one, so we only need about log₂ n squarings.
 
 1. If `n < 0`, use `x^n = (1/x)^|n|`. In JS, `|−2^31|` is still exact. (In languages with 32-bit ints, negating `−2^31` overflows.)
 2. `result = 1`, `base = x`, `exp = |n|`.

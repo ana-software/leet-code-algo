@@ -31,9 +31,12 @@ The substring with start index = 2 is "ab", which is an anagram of "ab".
 - `s` and `p` consist of lowercase English letters.
 
 ## Approach
-An anagram of `p` is any window of length `m = p.length` with the same letter counts. Sorting or recounting every window costs O(n·m). Instead slide a **fixed-size window** and update counts incrementally.
-
-Keep one array `need[26]`: start from `p`'s counts and subtract the window's counts. Track `diff`, the number of letters whose `need` is non-zero. The window is an anagram exactly when `diff == 0`.
+> [!IMPORTANT]
+> **Key insight: slide a fixed-size window and update the letter counts incrementally instead of recounting.**
+>
+> An anagram of `p` is any window of length `m = p.length` with the same letter counts. Sorting or recounting every window costs O(n·m). Instead slide a **fixed-size window** and update counts incrementally.
+>
+> Keep one array `need[26]`: start from `p`'s counts and subtract the window's counts. Track `diff`, the number of letters whose `need` is non-zero. The window is an anagram exactly when `diff == 0`.
 
 1. If `m > n`, return `[]`.
 2. Fill `need` from `p`; `diff` = number of distinct letters in `p`.

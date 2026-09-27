@@ -28,9 +28,12 @@ Output: 5.00000
 - `-10^4 <= nums[i] <= 10^4`
 
 ## Approach
-All windows have the same length `k`, so the window with the largest **sum** also has the largest **average**. We only need to find the maximum sum and divide by `k` once at the end.
-
-Recomputing each window's sum from scratch is O(n·k), which can reach 10¹⁰ operations. A fixed-size sliding window fixes that: when the window moves one step right, one element enters and one leaves, so the new sum is `sum + nums[i] − nums[i − k]`.
+> [!IMPORTANT]
+> **Key insight: slide a fixed-size window: one element enters and one leaves, so each new sum takes O(1).**
+>
+> All windows have the same length `k`, so the window with the largest **sum** also has the largest **average**. We only need to find the maximum sum and divide by `k` once at the end.
+>
+> Recomputing each window's sum from scratch is O(n·k), which can reach 10¹⁰ operations. A fixed-size sliding window fixes that: when the window moves one step right, one element enters and one leaves, so the new sum is `sum + nums[i] − nums[i − k]`.
 
 1. Sum the first `k` elements; this is the current and best sum.
 2. For `i` from `k` to `n − 1`: add `nums[i]`, subtract `nums[i − k]`, update the best sum.

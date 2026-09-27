@@ -55,7 +55,10 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 - It is **guaranteed** that `s` is a valid roman numeral in the range `[1, 3999]`.
 
 ## Approach
-All six subtraction cases share one rule: **a symbol is subtracted exactly when a larger symbol follows it**; otherwise it is added. So there is no need to list `IV`, `IX`, ... separately.
+> [!IMPORTANT]
+> **Key insight: a symbol is subtracted exactly when a larger symbol follows it.**
+>
+> All six subtraction cases share one rule: **a symbol is subtracted exactly when a larger symbol follows it**; otherwise it is added. So there is no need to list `IV`, `IX`, ... separately.
 
 1. Map each symbol to its value.
 2. For each index `i`: if `value(s[i]) < value(s[i+1])`, subtract it; otherwise add it.

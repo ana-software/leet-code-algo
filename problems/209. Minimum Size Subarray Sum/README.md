@@ -38,7 +38,10 @@ Output: 0
 ## Approach
 Checking every subarray is O(n²) — too slow for 10⁵ elements.
 
-Key insight: all numbers are **positive**, so growing a window only increases its sum and shrinking it only decreases it. That makes a variable-size sliding window work:
+> [!IMPORTANT]
+> **Key insight: all numbers are positive, so grow the window on the right and shrink it from the left while the sum is enough.**
+>
+> All numbers are **positive**, so growing a window only increases its sum and shrinking it only decreases it. That makes a variable-size sliding window work:
 
 1. Move `right` across the array, adding `nums[right]` to `sum`.
 2. While `sum >= target`, the window `[left, right]` is valid: record its length, then remove `nums[left]` and move `left` right to try a shorter window.

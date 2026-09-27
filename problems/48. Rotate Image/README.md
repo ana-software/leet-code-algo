@@ -31,12 +31,15 @@ Output: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
 - `-1000 <= matrix[i][j] <= 1000`
 
 ## Approach
-A clockwise rotation sends `matrix[i][j]` to `matrix[j][n−1−i]`. Writing into a copy is easy but not allowed. The trick is that the rotation equals two simple in-place steps:
-
-1. **Transpose** (swap across the main diagonal): `matrix[i][j] ↔ matrix[j][i]` for `j > i`. Now `(i, j)` holds the old `(j, i)`.
-2. **Reverse each row**: column `j` becomes column `n−1−j`.
-
-Combined, the old `(i, j)` ends at `(j, n−1−i)`, which is exactly a 90° clockwise turn.
+> [!IMPORTANT]
+> **Key insight: a 90° clockwise rotation = transpose + reverse each row.**
+>
+> A clockwise rotation sends `matrix[i][j]` to `matrix[j][n−1−i]`. Writing into a copy is easy but not allowed. The trick is that the rotation equals two simple in-place steps:
+>
+> 1. **Transpose** (swap across the main diagonal): `matrix[i][j] ↔ matrix[j][i]` for `j > i`. Now `(i, j)` holds the old `(j, i)`.
+> 2. **Reverse each row**: column `j` becomes column `n−1−j`.
+>
+> Combined, the old `(i, j)` ends at `(j, n−1−i)`, which is exactly a 90° clockwise turn.
 
 ## Walkthrough
 `matrix = [[1,2,3],[4,5,6],[7,8,9]]`

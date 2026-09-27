@@ -29,7 +29,10 @@ Output: 2
 ## Approach
 Checking every subarray is O(n²), about 2 · 10⁸ operations at the limit — too slow. A sliding window doesn't work either, because values can be **negative**, so growing a window doesn't always increase its sum.
 
-Key insight: let `prefix` be the sum of `nums[0..j]`. A subarray `nums[i+1..j]` sums to `k` exactly when an earlier prefix sum equals `prefix − k`. So the number of subarrays ending at `j` with sum `k` equals the number of earlier prefixes with value `prefix − k`.
+> [!IMPORTANT]
+> **Key insight: the subarrays ending here with sum `k` are the earlier prefix sums equal to `prefix − k`, so count them in a hash map.**
+>
+> Let `prefix` be the sum of `nums[0..j]`. A subarray `nums[i+1..j]` sums to `k` exactly when an earlier prefix sum equals `prefix − k`. So the number of subarrays ending at `j` with sum `k` equals the number of earlier prefixes with value `prefix − k`.
 
 1. Keep a map `prefix sum → how many times it has appeared`, starting with `{0: 1}` (the empty prefix, so subarrays starting at index 0 are counted).
 2. For each element: add it to `prefix`, add `seen[prefix − k]` to the answer, then record `prefix` in the map.

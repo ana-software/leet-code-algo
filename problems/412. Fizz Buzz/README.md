@@ -34,7 +34,10 @@ Output: ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13"
 - `1 <= n <= 10^4`
 
 ## Approach
-A direct simulation. The only trap is the order of the checks: a number divisible by both 3 and 5 must print `"FizzBuzz"`, so either test that case first or build the string by concatenation.
+> [!IMPORTANT]
+> **Key insight: build the string by concatenation, so `"FizzBuzz"` comes out automatically.**
+>
+> A direct simulation. The only trap is the order of the checks: a number divisible by both 3 and 5 must print `"FizzBuzz"`, so either test that case first or build the string by concatenation.
 
 1. For `i` from 1 to `n`: start with an empty string.
 2. Append `"Fizz"` if `i % 3 == 0`, then `"Buzz"` if `i % 5 == 0`.

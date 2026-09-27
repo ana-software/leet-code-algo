@@ -41,7 +41,10 @@ Explanation: You need to reduce multiple spaces between two words to a single sp
 **Follow-up:** If the string data type is mutable in your language, can you solve it **in-place** with `O(1)` extra space?
 
 ## Approach
-The one-liner `s.trim().split(/\s+/).reverse().join(" ")` is correct; the interview version does the same thing explicitly with two pointers scanning from the **right**, so words come out already in reverse order and extra spaces are never copied.
+> [!IMPORTANT]
+> **Key insight: scan from the right, so the words come out already reversed.**
+>
+> The one-liner `s.trim().split(/\s+/).reverse().join(" ")` is correct; the interview version does the same thing explicitly with two pointers scanning from the **right**, so words come out already in reverse order and extra spaces are never copied.
 
 1. Set `i = n − 1`.
 2. Skip spaces leftwards. If `i < 0`, stop.

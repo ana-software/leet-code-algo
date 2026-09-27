@@ -32,7 +32,8 @@ Explanation: [9,4] is also accepted.
 ## Approach
 Each value `v` should appear `min(count1(v), count2(v))` times in the answer. The brute-force idea — for each element of `nums1`, search `nums2` for an unused match — is O(n·m).
 
-Key insight: count the elements of one array in a hash map, then walk the other array and "spend" those counts.
+> [!IMPORTANT]
+> **Key insight: each value appears `min(count1, count2)` times: count one array in a hash map, then spend those counts while walking the other.**
 
 1. Build a map `value → count` from `nums1`.
 2. For each `x` in `nums2`: if `count[x] > 0`, append `x` to the result and decrement `count[x]`.

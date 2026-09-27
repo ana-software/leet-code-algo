@@ -33,12 +33,15 @@ Output: 0
 ## Approach
 Summing every square cell by cell is O(m·n·min(m,n)³), far too slow.
 
-**Step 1: 2D prefix sums.** Let `P[i][j]` be the sum of the top-left `i × j` block. Then the sum of any `k × k` square with bottom-right corner `(i, j)` is
-`P[i][j] − P[i−k][j] − P[i][j−k] + P[i−k][j−k]`, which takes O(1).
-
-**Step 2: only try to grow the answer by one.** With O(1) square sums we could test every side length at every cell (O(m·n·min(m,n))), or binary search the side length (O(m·n·log)). There is a simpler way. Keep `best`, the largest side found so far, and at each cell test only one square: side `best + 1`, ending at that cell. If it fits, `best++`.
-
-Why this is enough: all values are non-negative, so any square inside a valid square is valid too. If a square of side `s` ends at `(i, j)`, then the side `s − 1` square ending at `(i−1, j−1)` is inside it. That cell is processed earlier, so `best` is already at least `s − 1` when we reach `(i, j)`, and the `best + 1` test catches side `s`.
+> [!IMPORTANT]
+> **Key insight: 2D prefix sums give any square's sum in O(1), and the answer can only grow by one per cell, so test just side `best + 1`.**
+>
+> **Step 1: 2D prefix sums.** Let `P[i][j]` be the sum of the top-left `i × j` block. Then the sum of any `k × k` square with bottom-right corner `(i, j)` is
+> `P[i][j] − P[i−k][j] − P[i][j−k] + P[i−k][j−k]`, which takes O(1).
+>
+> **Step 2: only try to grow the answer by one.** With O(1) square sums we could test every side length at every cell (O(m·n·min(m,n))), or binary search the side length (O(m·n·log)). There is a simpler way. Keep `best`, the largest side found so far, and at each cell test only one square: side `best + 1`, ending at that cell. If it fits, `best++`.
+>
+> Why this is enough: all values are non-negative, so any square inside a valid square is valid too. If a square of side `s` ends at `(i, j)`, then the side `s − 1` square ending at `(i−1, j−1)` is inside it. That cell is processed earlier, so `best` is already at least `s − 1` when we reach `(i, j)`, and the `best + 1` test catches side `s`.
 
 We fill `P` and test in the same pass, since `P[i][j]` only needs cells above and to the left.
 

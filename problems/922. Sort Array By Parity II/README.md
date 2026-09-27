@@ -35,7 +35,10 @@ Output: [2,3]
 ## Approach
 The easy way is to build a new array: put evens at indices 0, 2, 4, … and odds at 1, 3, 5, …. That's O(n) time but O(n) extra space. The follow-up asks for in-place.
 
-Key insight: since exactly half the numbers are even, every even index holding an odd number is matched by some odd index holding an even number. Swapping those two fixes both positions at once.
+> [!IMPORTANT]
+> **Key insight: every odd number at an even index has a matching even number at an odd index to swap with.**
+>
+> Since exactly half the numbers are even, every even index holding an odd number is matched by some odd index holding an even number. Swapping those two fixes both positions at once.
 
 1. Keep a pointer `i` over even indices (0, 2, 4, …) and a pointer `j` over odd indices (1, 3, 5, …).
 2. Move `i` forward by 2 while `nums[i]` is even (already in place).

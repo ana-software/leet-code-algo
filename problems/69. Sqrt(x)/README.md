@@ -29,7 +29,10 @@ Explanation: The square root of 8 is 2.82842..., and since we round it down to t
 - `0 <= x <= 2^31 - 1`
 
 ## Approach
-We want the **largest integer `m` with `m * m <= x`**. The condition `m * m <= x` is true for small `m` and false for large `m` (it flips once), so we can binary search for the last `m` where it is true.
+> [!IMPORTANT]
+> **Key insight: binary search for the largest `m` with `m * m <= x`.**
+>
+> We want the **largest integer `m` with `m * m <= x`**. The condition `m * m <= x` is true for small `m` and false for large `m` (it flips once), so we can binary search for the last `m` where it is true.
 
 Trying every `m` from 1 upward takes O(√x), about 46,000 steps for the largest input. Binary search takes about 31.
 

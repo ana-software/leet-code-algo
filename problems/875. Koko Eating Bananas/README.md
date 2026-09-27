@@ -39,7 +39,10 @@ Output: 23
 ## Approach
 At speed `k`, a pile of `p` bananas takes `ceil(p / k)` hours, so checking one speed costs O(n). Trying every speed from 1 up to `max(piles)` (up to 10⁹) is far too slow.
 
-Key insight (**binary search on the answer**): a faster speed never needs more hours. So "can she finish at speed `k`?" is *no, no, …, no, yes, yes, …*, and we want the first *yes*.
+> [!IMPORTANT]
+> **Key insight (binary search on the answer): a faster speed never needs more hours, so binary search for the slowest speed that works.**
+>
+> The question "can she finish at speed `k`?" is *no, no, …, no, yes, yes, …*, and we want the first *yes*.
 
 1. Search speeds in `[1, max(piles)]`. At `max(piles)` every pile takes one hour, and `h >= piles.length`, so that speed always works.
 2. For `mid`, compute `hours = Σ ceil(p / mid)`.

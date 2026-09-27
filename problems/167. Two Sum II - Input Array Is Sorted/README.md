@@ -46,12 +46,15 @@ Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We ret
 ## Approach
 The array is sorted, so we can use two pointers from opposite ends instead of a hash map. A hash map (as in the original Two Sum) would be O(n) time, but it uses O(n) extra space, and the problem asks for constant space. Checking every pair would be O(n²), which is too slow for 3 · 10⁴ elements.
 
-Key insight: with `left` at the smallest remaining value and `right` at the largest, the sum `numbers[left] + numbers[right]` tells us which pointer to move:
-- If the sum is **too small**, `numbers[left]` can't be part of the answer with any element (even the largest one left isn't enough), so move `left` right.
-- If the sum is **too large**, `numbers[right]` can't be part of the answer with any element (even the smallest one left is too much), so move `right` left.
-- If the sum equals `target`, return `[left + 1, right + 1]` (convert to 1-indexed).
-
-Each step discards one element that can't be in the answer, so the pointers never skip the solution.
+> [!IMPORTANT]
+> **Key insight: the sum at the two ends tells you which end can't be in the answer, so drop it.**
+>
+> With `left` at the smallest remaining value and `right` at the largest, the sum `numbers[left] + numbers[right]` tells us which pointer to move:
+> - If the sum is **too small**, `numbers[left]` can't be part of the answer with any element (even the largest one left isn't enough), so move `left` right.
+> - If the sum is **too large**, `numbers[right]` can't be part of the answer with any element (even the smallest one left is too much), so move `right` left.
+> - If the sum equals `target`, return `[left + 1, right + 1]` (convert to 1-indexed).
+>
+> Each step discards one element that can't be in the answer, so the pointers never skip the solution.
 
 ## Walkthrough
 `numbers = [2,7,11,15]`, `target = 9`

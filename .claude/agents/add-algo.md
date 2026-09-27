@@ -84,9 +84,15 @@ If a folder for that number already exists (a folder in `problems/` starting wit
 {Statement converted from HTML to Markdown, plus examples and constraints}
 
 ## Approach
-{The key insight in plain words, then the algorithm step by step. If a brute-force
-solution is the natural first idea, say briefly why it is too slow and what the
-optimisation is.}
+{If a brute-force solution is the natural first idea, say briefly why it is too slow.}
+
+> [!IMPORTANT]
+> **Key insight ({pattern name, optional}): {the idea that makes the solution work, in one sentence}**
+>
+> {The insight explained in plain words: why it holds and why it is enough. Leave
+> this part out if the bold line already says everything.}
+
+{The algorithm step by step.}
 
 ## Walkthrough
 {Trace Example 1 through the algorithm step by step (a small table works well).}

@@ -37,7 +37,10 @@ Output: 1
 ## Approach
 The water held by lines `i < j` is `min(height[i], height[j]) * (j − i)`. Trying every pair is O(n²) — up to 5 · 10⁹ pairs, far too slow.
 
-Key insight: start with the widest container (`left = 0`, `right = n − 1`) and move pointers inward. Every move makes the width smaller, so the only way to get more water is a taller limiting line. The **shorter** line is the limit: pairing it with any line further inward gives a smaller width and a height that is still at most the shorter line, so no such container can beat the current one. That line can be discarded safely.
+> [!IMPORTANT]
+> **Key insight: always move the shorter line inward; it can never be part of a better container.**
+>
+> Start with the widest container (`left = 0`, `right = n − 1`) and move pointers inward. Every move makes the width smaller, so the only way to get more water is a taller limiting line. The **shorter** line is the limit: pairing it with any line further inward gives a smaller width and a height that is still at most the shorter line, so no such container can beat the current one. That line can be discarded safely.
 
 1. `left = 0`, `right = n − 1`, `best = 0`.
 2. While `left < right`: compute the area, update `best`, then move the pointer at the shorter line inward (on a tie, moving either is fine).

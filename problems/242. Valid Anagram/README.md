@@ -26,7 +26,10 @@ Output: false
 **Follow up:** What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
 
 ## Approach
-Two strings are anagrams exactly when they have the same length and the same count of every letter. Sorting both strings and comparing works in O(n log n); counting is O(n).
+> [!IMPORTANT]
+> **Key insight: anagrams have the same count of every letter, so count instead of sorting.**
+>
+> Two strings are anagrams exactly when they have the same length and the same count of every letter. Sorting both strings and comparing works in O(n log n); counting is O(n).
 
 1. If the lengths differ, return `false`.
 2. Keep one `count[26]` array: `+1` for each letter of `s`, `−1` for each letter of `t`.

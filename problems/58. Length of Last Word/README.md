@@ -36,7 +36,10 @@ Explanation: The last word is "joyboy" with length 6.
 - There will be at least one word in `s`.
 
 ## Approach
-`s.trim().split(" ")` works but builds an array of every word. Only the end of the string matters, so scan it **backwards**:
+> [!IMPORTANT]
+> **Key insight: only the end of the string matters, so scan it backwards.**
+>
+> `s.trim().split(" ")` works but builds an array of every word. Only the end of the string matters, so scan it **backwards**:
 
 1. Start at the last index and skip trailing spaces.
 2. Count non-space characters until a space or the start of the string.

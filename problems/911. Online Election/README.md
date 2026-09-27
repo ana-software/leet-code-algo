@@ -44,7 +44,10 @@ topVotedCandidate.q(8); // return 1
 ## Approach
 Recounting the votes for every query costs O(n) per query. That works for these limits, but it repeats the same work every time.
 
-Key insight: the leader only changes when a vote is cast, so there are only `n` possible answers. Compute them all once, then each query is a lookup.
+> [!IMPORTANT]
+> **Key insight: precompute the leader after every vote; each query is then a binary search on time.**
+>
+> The leader only changes when a vote is cast, so there are only `n` possible answers. Compute them all once, then each query is a lookup.
 
 1. **Constructor:** go through the votes in order, keeping a count per person and the current leader. After vote `i`, if the voted person's count is `>=` the best count, they become the leader. Using `>=` (not `>`) makes a tie go to the most recent vote. Store `leaders[i]`.
 2. **`q(t)`:** binary search `times` for the **last index `i` with `times[i] <= t`** (votes at exactly `t` count) and return `leaders[i]`. Since `t >= times[0]`, such an index always exists.

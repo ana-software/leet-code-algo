@@ -37,9 +37,12 @@ Output: 1
 ## Approach
 Scanning for the maximum is O(n), but the problem asks for O(log n).
 
-Key insight: compare `arr[mid]` with its right neighbour.
-- `arr[mid] < arr[mid + 1]`: we are on the rising slope, so the peak is **strictly to the right** of `mid`.
-- Otherwise we are on the falling slope (or at the peak), so the peak is **`mid` or to its left**.
+> [!IMPORTANT]
+> **Key insight: compare `arr[mid]` with its right neighbour to tell which slope you're on.**
+>
+> Compare `arr[mid]` with its right neighbour.
+> - `arr[mid] < arr[mid + 1]`: we are on the rising slope, so the peak is **strictly to the right** of `mid`.
+> - Otherwise we are on the falling slope (or at the peak), so the peak is **`mid` or to its left**.
 
 This is a yes/no question that flips exactly once (at the peak), so binary search finds that point:
 

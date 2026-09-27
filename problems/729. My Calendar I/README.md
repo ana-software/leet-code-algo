@@ -38,7 +38,10 @@ myCalendar.book(20, 30); // return True, The event can be booked, as the first e
 ## Approach
 The simple way is to compare the new event with every booked one: `[s1, e1)` and `[s2, e2)` overlap exactly when `s1 < e2 && s2 < e1`. That is O(n) per call.
 
-Better: keep the booked events **sorted by start**. They never overlap, so their ends are sorted too, and the new event can only clash with its two **neighbours** in that order:
+> [!IMPORTANT]
+> **Key insight: keep the bookings sorted by start; a new event can only clash with its two neighbours.**
+>
+> Better: keep the booked events **sorted by start**. They never overlap, so their ends are sorted too, and the new event can only clash with its two **neighbours** in that order:
 
 1. Binary search for `idx`, the first booked event with `start >= startTime`.
 2. The event just before (`idx - 1`) must end by `startTime`: if its `end > startTime`, it's a clash.
