@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/logo.svg" alt="algo notes logo" width="160"></p>
+
 # leet-code-algo
 
 Algorithm problems solved in TypeScript, for interview practice. Each problem has an explanation of the approach, a solution you can paste into LeetCode, and tests that run it like LeetCode's "Run" button. Each explanation links to the [Hello Interview](https://www.hellointerview.com/learn/code) lesson on its pattern. New problems, or whole LeetCode problem lists, are added by a Claude Code agent.
@@ -8,6 +10,7 @@ problems/
     README.md          explanation, walkthrough, complexity, theory link
     solution.ts        the solution
     solution.test.ts   runs the examples and edge cases
+assets/logo.svg        repo logo
 scripts/run.ts         test runner behind `npm test`
 .claude/agents/        the add-algo agent
 ```
