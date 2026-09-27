@@ -39,11 +39,14 @@ Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
 ## Approach
 Brute force tries every pair `(i, j)` and sums the subarray between them: O(n²) even with running sums, which is too slow for 10⁵ elements.
 
-Key insight (Kadane's algorithm): let `cur` be the best sum of a subarray that **ends at** index `i`. That subarray either extends the best one ending at `i − 1`, or starts fresh at `i`. Extending only helps if the previous sum is positive, so:
-
-`cur = max(nums[i], cur + nums[i])`
-
-The answer is the largest `cur` seen at any index.
+> [!IMPORTANT]
+> **Key insight (Kadane's algorithm): a negative running sum only drags down whatever comes after it, so drop it and start fresh.**
+>
+> Let `cur` be the best sum of a subarray that **ends at** index `i`. That subarray either extends the best one ending at `i − 1`, or starts fresh at `i`. Extending only helps if the previous sum is positive, so:
+>
+> `cur = max(nums[i], cur + nums[i])`
+>
+> The answer is the largest `cur` seen at any index.
 
 1. Start with `cur = best = nums[0]` (the subarray must be non-empty, so don't start from 0 — that would be wrong for all-negative arrays).
 2. For each next element, update `cur` with the formula above, then `best = max(best, cur)`.
