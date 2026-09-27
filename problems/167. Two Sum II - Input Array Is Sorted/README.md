@@ -2,6 +2,8 @@
 
 **Difficulty:** Medium · **Topics:** Array, Two Pointers, Binary Search · [LeetCode](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
 
+**Theory:** [Hello Interview — Two Pointers](https://www.hellointerview.com/learn/code/two-pointers/overview)
+
 ## Problem
 You are given a **1-indexed** array of integers `numbers` that is already **sorted in non-decreasing order**.
 

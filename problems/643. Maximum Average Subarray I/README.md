@@ -2,6 +2,8 @@
 
 **Difficulty:** Easy · **Topics:** Array, Sliding Window · [LeetCode](https://leetcode.com/problems/maximum-average-subarray-i/)
 
+**Theory:** [Hello Interview — Sliding Window (fixed size)](https://www.hellointerview.com/learn/code/sliding-window/fixed-length)
+
 ## Problem
 You are given an integer array `nums` consisting of `n` elements, and an integer `k`.
 

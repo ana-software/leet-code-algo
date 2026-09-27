@@ -1,6 +1,6 @@
 ---
 name: add-algo
-description: Use when the user sends a link to an algorithm problem — LeetCode (any URL form, including leetcode.cn and contest links), NeetCode, Codewars, HackerRank, GeeksforGeeks, or any other judge — or a LeetCode problem list (leetcode.com/problem-list/...), in which case it adds every problem from the list that the repo doesn't have yet. Creates a folder "{number}. {Title}" in the repo root with README.md (explanation), solution.ts, and solution.test.ts that simulates LeetCode's "Run" flow on the problem's example cases. Handles one or several links per request.
+description: Use when the user sends a link to an algorithm problem — LeetCode (any URL form, including leetcode.cn and contest links), NeetCode, Codewars, HackerRank, GeeksforGeeks, or any other judge — or a LeetCode problem list (leetcode.com/problem-list/...), in which case it adds every problem from the list that the repo doesn't have yet. Creates a folder "problems/{number}. {Title}" with README.md (explanation), solution.ts, and solution.test.ts that simulates LeetCode's "Run" flow on the problem's example cases. Handles one or several links per request.
 tools: Bash, Read, Write, Edit, WebFetch, WebSearch
 model: inherit
 ---
@@ -20,7 +20,7 @@ A `leetcode.com/problem-list/<listSlug>/` link (any suffix or query string) is a
    ```
 
    If the response has errors or no questions, the list is private or doesn't exist. Stop and tell the user.
-2. A problem is already in the repo if a folder in the repo root starts with `{questionFrontendId}. ` (compare the number only, not the title). Skip those.
+2. A problem is already in the repo if a folder in `problems/` starts with `{questionFrontendId}. ` (compare the number only, not the title). Skip those.
 3. Skip `paidOnly: true` problems; the API won't return their statement.
 4. Add each remaining problem by its `titleSlug`, following steps 1–6, in list order.
 5. In the report, start with the list's name and three counts: added, already in the repo, skipped as premium. Then give the usual per-problem report for the added ones.
@@ -63,13 +63,13 @@ There's no TypeScript starter code for most other platforms, so write the functi
 
 ## 2. Create the folder
 
-Name it `{number}. {title}` in the repo root, e.g. `1. Two Sum`. Replace any `/` or `:` in the title with `-`.
+Name it `{number}. {title}` inside the `problems/` folder, e.g. `problems/1. Two Sum`. Keep problem folders out of the repo root. Replace any `/` or `:` in the title with `-`.
 
 - LeetCode: the number is `questionFrontendId`. Some IDs contain letters (e.g. `LCR 001`, `面试题 01.01`); keep them as they are.
 - A platform with its own ID: use that ID, e.g. `1791A. Division`.
 - No ID at all (Codewars, GeeksforGeeks, ...): use the platform name as the number, e.g. `Codewars. Valid Braces`.
 
-If a folder for that number already exists (a folder starting with `{number}. `), skip that problem and say so in the report. Don't overwrite it.
+If a folder for that number already exists (a folder in `problems/` starting with `{number}. `), skip that problem and say so in the report. Don't overwrite it.
 
 ## 3. README.md
 
@@ -77,6 +77,8 @@ If a folder for that number already exists (a folder starting with `{number}. `)
 # {id}. {Title}
 
 **Difficulty:** {difficulty as the platform states it} · **Topics:** {tags} · [{Platform}]({url})
+
+**Theory:** [Hello Interview — {Pattern}]({lesson url})
 
 ## Problem
 {Statement converted from HTML to Markdown, plus examples and constraints}
@@ -93,6 +95,32 @@ optimisation is.}
 - **Time:** O(...) — why
 - **Space:** O(...) — why
 ```
+
+### Theory link
+
+Link the Hello Interview lesson for the pattern that **your solution** uses (not every LeetCode tag). The lessons live under `https://www.hellointerview.com/learn/code/`. Known pages:
+
+| Pattern | Path |
+|---|---|
+| Two Pointers | `two-pointers/overview` |
+| Sliding Window (fixed size) | `sliding-window/fixed-length` |
+| Sliding Window (variable size) | `sliding-window/variable-length` |
+| Prefix Sum | `prefix-sum/overview` |
+| Binary Search | `binary-search/overview` |
+| Intervals | `intervals/overview` |
+| Stack | `stack/overview` |
+| Linked List | `linked-list/overview` |
+| Heap | `heap/overview` |
+| Depth-First Search | `depth-first-search/introduction` |
+| Breadth-First Search | `breadth-first-search/introduction` |
+| Backtracking | `backtracking/overview` |
+| Graphs | `graphs/topological-sort` |
+| Dynamic Programming | `dynamic-programming/fundamentals` |
+| Greedy | `greedy/overview` |
+| Trie | `trie/overview` |
+| Matrices | `matrices/spiral-matrix` |
+
+If a more specific lesson fits better, look for it on `https://www.hellointerview.com/learn/code`. If the solution combines two patterns, link both, separated by ` · `. Check every link with `curl -s -o /dev/null -w '%{http_code}' -L <url>` and use it only if it returns `200`. If no lesson matches the approach (e.g. a plain counting pass), leave the Theory line out.
 
 ## 4. solution.ts
 
@@ -148,7 +176,11 @@ Rules:
 
 ## 6. Verify
 
-Run `npx tsx "{folder}/solution.test.ts"`. If a case fails, fix the solution (not the expected value, unless you wrote it down wrong) and run again until every case passes.
+Run `npx tsx "problems/{folder}/solution.test.ts"` from the repo root. If a case fails, fix the solution (not the expected value, unless you wrote it down wrong) and run again until every case passes.
+
+## 6b. Update the main README
+
+Add a row for each new problem to the **Problems** table in the repo-root `README.md`, keeping rows sorted by number. The Problem cell links to the folder as `problems/{folder}/` (URL-encode spaces as `%20`). The Pattern cell is the Theory link from the problem's README, or a short plain-text name of the approach when there is no Theory link.
 
 ## 7. Report
 

@@ -2,6 +2,8 @@
 
 **Difficulty:** Medium · **Topics:** Array, Divide and Conquer, Dynamic Programming · [LeetCode](https://leetcode.com/problems/maximum-subarray/)
 
+**Theory:** [Hello Interview — Dynamic Programming](https://www.hellointerview.com/learn/code/dynamic-programming/fundamentals)
+
 ## Problem
 Given an integer array `nums`, find the subarray with the largest sum, and return *its sum*.
 

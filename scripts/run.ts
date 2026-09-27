@@ -3,7 +3,7 @@ import { spawnSync } from "node:child_process";
 import { existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
-const root = join(import.meta.dirname, "..");
+const root = join(import.meta.dirname, "..", "problems");
 const problems = readdirSync(root, { withFileTypes: true })
   .filter((d) => d.isDirectory() && /^\d+\. /.test(d.name) && existsSync(join(root, d.name, "solution.test.ts")))
   .map((d) => d.name)
